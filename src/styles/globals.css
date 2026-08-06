@@ -1,0 +1,131 @@
+:root {
+  /* Color Palette - Traditional yet Modern */
+  --color-primary: #E14503; /* Deep Saffron */
+  --color-primary-hover: #C53A02;
+  --color-secondary: #FFD700; /* Rich Gold */
+  --color-text-dark: #1E293B; /* Charcoal */
+  --color-text-light: #F8FAFC;
+  --color-text-muted: #64748B;
+  --color-bg-light: #FAFAFA; /* Off-white / Ivory */
+  --color-bg-white: #FFFFFF;
+  --color-border: #E2E8F0;
+
+  /* Typography */
+  --font-heading: 'Martel', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Shadows and Effects */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --shadow-glow: 0 0 20px rgba(225, 69, 3, 0.2);
+  
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-text-dark);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+}
+
+/* Reusable Glassmorphism Container */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-md);
+  border-radius: 12px;
+}
+
+/* Primary Button Style */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(225, 69, 3, 0.05);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
