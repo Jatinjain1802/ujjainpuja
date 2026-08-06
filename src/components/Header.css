@@ -190,12 +190,12 @@
   );
   border-radius: 999px;
   color: var(--text-primary);
-    /* position the hamburger at the right edge for mobile */
-    position: absolute;
-    right: 18px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1100;
+  /* position the hamburger at the right edge for mobile */
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1100;
   border: 1px solid rgba(210, 176, 141, 0.25);
   padding: 8px;
   box-shadow: 0 6px 18px rgba(47, 36, 24, 0.08);
@@ -207,12 +207,12 @@
 
 .mobile-menu-btn:hover {
   transform: translateY(-2px);
-   /* when the menu is open on mobile, show a black 'X' icon while keeping the
+  /* when the menu is open on mobile, show a black 'X' icon while keeping the
      button background transparent for a cleaner look */
-   color: #000;
-   background: transparent;
-   border: 0;
-   box-shadow: none;
+  color: #000;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
   box-shadow: 0 10px 26px rgba(47, 36, 24, 0.12);
 }
 
