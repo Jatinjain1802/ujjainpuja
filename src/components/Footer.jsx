@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { Instagram, MapPin, Phone } from "./icons";
 import "./Footer.css";
 import { LocaleContext } from "../LocaleContext";
@@ -40,6 +41,22 @@ const Footer = () => {
               </svg>
             </a>
           </div>
+        </div>
+
+        <div className="footer-col">
+          <h3>{messages.footer.servicesHeading}</h3>
+          <ul>
+            {[
+              "Shani Dosh Nivaran / शनि दोष निवारण",
+              "Navgraha Shanti / नवग्रह शांति",
+              "Mahamrityunjay Japa / महामृत्युंजय जप",
+              "Yagya & Havan / यज्ञ एवं हवन",
+            ].map((serviceTitle) => (
+              <li key={serviceTitle}>
+                <Link to="/services#services">{serviceTitle}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="footer-col">

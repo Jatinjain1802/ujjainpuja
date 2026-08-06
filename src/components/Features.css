@@ -4,6 +4,79 @@
   background: linear-gradient(180deg, var(--color-bg-light) 0%, #fcf7ee 100%);
 }
 
+.features-section .section-heading.center {
+  max-width: 720px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.features-section .section-heading.center .eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.features-section .section-heading.center h2 {
+  margin: 0 auto 16px;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.05;
+  color: var(--color-text-dark);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
+.features-section .section-heading.center h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 88px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary),
+    var(--color-primary)
+  );
+  border-radius: 999px;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.6s ease-out 0.2s;
+}
+
+.features-section .section-heading.center.reveal-active h2::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.features-section .section-heading.center .section-description {
+  margin: 0 auto 18px;
+  max-width: 620px;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.features-section .section-heading.center .section-shloka {
+  margin: 0 auto 8px;
+  max-width: 640px;
+  color: var(--color-text-dark);
+  font-size: 1.02rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.features-section .section-heading.center .section-shloka-translation {
+  margin: 0 auto;
+  max-width: 640px;
+  color: var(--color-text-muted);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

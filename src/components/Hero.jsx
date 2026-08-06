@@ -23,7 +23,7 @@ const Hero = () => {
           <p className="hero-subtitle">{messages.hero.subtitle}</p>
           <p className="hero-desc">{messages.hero.description}</p>
           <div className="hero-buttons">
-            <a href="#features" className="btn-primary">
+            <a href="#about" className="btn-primary">
               {messages.hero.primaryButton}{" "}
               <FaArrowRight style={{ marginLeft: "8px" }} />
             </a>

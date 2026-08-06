@@ -8,21 +8,27 @@ import hiLocales from "../locales/hi.json";
 const BookingForm = () => {
   const { locale, messages } = useContext(LocaleContext);
 
-  // Build bilingual options using both locale files so user sees translation
-  const pujaOptions = (hiLocales.pages.services.items || []).map(
-    (hiItem, idx) => {
-      const enItem = enLocales.pages.services.items?.[idx];
-      const hiTitle = hiItem.title || "";
-      const enTitle = enItem?.title || hiTitle;
-      return {
-        value: enTitle, // canonical value in English
-        label: `${hiTitle} / ${enTitle}`,
-      };
-    },
-  );
+  // Build bilingual options from the current locale content so the form stays in sync with the expanded services list.
+  const serviceItems = messages?.pages?.services?.items || [];
+  const pujaOptions = serviceItems.map((item, idx) => {
+    const enItem = enLocales.pages.services.items?.[idx];
+    const hiItem = hiLocales.pages.services.items?.[idx];
+    const currentTitle = item.title || "";
+    const secondaryTitle =
+      locale === "hi"
+        ? enItem?.title || currentTitle
+        : hiItem?.title || currentTitle;
+
+    return {
+      value: currentTitle,
+      label: `${currentTitle} / ${secondaryTitle}`,
+    };
+  });
 
   const [formData, setFormData] = useState({
     name: "",
+    phone: "",
+    email: "",
     date: "",
     puja: null,
     city: "",
@@ -40,12 +46,22 @@ const BookingForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { name, date, puja, city, message } = formData;
-    if (!name || !date || !puja || !city) {
+    const { name, phone, email, date, puja, city, message } = formData;
+    if (!name || !phone || !email || !date || !puja || !city) {
       const errMsg =
         locale === "hi"
-          ? "कृपया अपना नाम, पूजा का प्रकार, शहर और तिथि भरें।"
-          : "Please enter name, puja type, city, and date.";
+          ? "कृपया अपना नाम, फोन नंबर, ईमेल, पूजा का प्रकार, शहर और तिथि भरें।"
+          : "Please enter name, phone number, email, puja type, city, and date.";
+      alert(errMsg);
+      return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      const errMsg =
+        locale === "hi"
+          ? "कृपया वैध ईमेल दर्ज करें।"
+          : "Please enter a valid email address.";
       alert(errMsg);
       return;
     }
@@ -64,6 +80,12 @@ const BookingForm = () => {
     const nameLabel =
       messages.pages?.contactForm?.nameLabel ||
       (locale === "hi" ? "नाम" : "Name");
+    const phoneLabel =
+      messages.pages?.contactForm?.phoneLabel ||
+      (locale === "hi" ? "फोन नंबर" : "Phone Number");
+    const emailLabel =
+      messages.pages?.contactForm?.emailLabel ||
+      (locale === "hi" ? "ईमेल" : "Email");
     const messageLabel =
       messages.pages?.contactForm?.messageLabel ||
       (locale === "hi" ? "संदेश" : "Message");
@@ -71,6 +93,8 @@ const BookingForm = () => {
     const lines = [];
     lines.push(serviceTemplate.replace("{service}", pujaText));
     lines.push(`${nameLabel}: ${name}`);
+    lines.push(`${phoneLabel}: ${phone}`);
+    lines.push(`${emailLabel}: ${email}`);
     lines.push(`${dateLabel}: ${date}`);
     lines.push(`${cityLabel}: ${city}`);
     lines.push(
@@ -81,7 +105,15 @@ const BookingForm = () => {
     const whatsappUrl = `https://wa.me/919039095999?text=${encodeURIComponent(whatsappText)}`;
 
     window.open(whatsappUrl, "_blank");
-    setFormData({ name: "", date: "", puja: null, city: "", message: "" });
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
+      date: "",
+      puja: null,
+      city: "",
+      message: "",
+    });
   };
 
   return (
@@ -132,6 +164,50 @@ const BookingForm = () => {
                     id="date"
                     name="date"
                     value={formData.date}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="phone">
+                    {messages.pages?.contactForm?.phoneLabel ||
+                      (locale === "hi" ? "फोन नंबर" : "Phone Number")}
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder={
+                      messages.pages?.contactForm?.phonePlaceholder ||
+                      (locale === "hi"
+                        ? "अपना फोन नंबर दर्ज करें"
+                        : "Enter your phone number")
+                    }
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="email">
+                    {messages.pages?.contactForm?.emailLabel ||
+                      (locale === "hi" ? "ईमेल" : "Email")}
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder={
+                      messages.pages?.contactForm?.emailPlaceholder ||
+                      (locale === "hi"
+                        ? "अपना ईमेल दर्ज करें"
+                        : "Enter your email address")
+                    }
+                    value={formData.email}
                     onChange={handleChange}
                     required
                   />

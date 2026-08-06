@@ -72,7 +72,7 @@ const Services = () => {
                 </div>
                 <div className="service-info">
                   <h3>{service.title}</h3>
-                  <p>{service.description}</p>
+                  <p>{service.details || service.description}</p>
                 </div>
               </div>
             );

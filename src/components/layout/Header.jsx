@@ -8,7 +8,7 @@ function Header() {
   const navItems = [
     { label: messages.header.nav.home, to: "/" },
     { label: messages.header.nav.services, to: "/services" },
-    { label: messages.header.nav.about, to: "/about" },
+    { label: messages.header.nav.features, to: "/gallery" },
     { label: messages.header.nav.contact, to: "/contact" },
   ];
   return (

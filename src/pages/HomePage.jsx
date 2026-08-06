@@ -82,6 +82,7 @@ function HomePage() {
             eyebrow={home.serviceSection.eyebrow}
             title={home.serviceSection.title}
             description={home.serviceSection.description}
+            align="center"
           />
 
           <div className="cards-grid">

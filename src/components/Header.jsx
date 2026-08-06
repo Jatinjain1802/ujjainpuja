@@ -22,6 +22,12 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   useEffect(() => {
     // lock body scroll when mobile menu is open
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
@@ -33,7 +39,11 @@ const Header = () => {
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="container header-container">
-        <Link to="/" className="logo-link" aria-label={messages.header.logoAlt}>
+        <Link
+          to="/#home"
+          className="logo-link"
+          aria-label={messages.header.logoAlt}
+        >
           <img
             src={logoImage}
             alt={messages.header.logoAlt}
@@ -46,18 +56,18 @@ const Header = () => {
           className={`desktop-nav ${isMobileMenuOpen ? "mobile-open" : ""}`}
           aria-hidden={!isMobileMenuOpen}
         >
-          <Link to="/" onClick={toggleMobileMenu}>
+          <Link to="/#home" onClick={closeMobileMenu}>
             {messages.header.nav.home}
           </Link>
-          <a href="/#services" onClick={toggleMobileMenu}>
+          <Link to="/#services" onClick={closeMobileMenu}>
             {messages.header.nav.services}
-          </a>
-          <a href="/about" onClick={toggleMobileMenu}>
-            {messages.header.nav.about}
-          </a>
-          <a href="/#contact" onClick={toggleMobileMenu}>
+          </Link>
+          <Link to="/#about" onClick={closeMobileMenu}>
+            {messages.header.nav.features}
+          </Link>
+          <Link to="/#contact" onClick={closeMobileMenu}>
             {messages.header.nav.contact}
-          </a>
+          </Link>
           <a href="tel:+91919039095999" className="btn-primary phone-btn">
             <Phone size={18} />
             <span>+91 919039095999</span>

@@ -7,7 +7,7 @@
     "nav": {
       "home": "Home",
       "services": "Services",
-      "about": "About",
+      "features": "About",
       "contact": "Contact"
     },
     "phone": "+91 919039095999",
@@ -16,6 +16,7 @@
   "footer": {
     "title": "Vedic Anushthan Kendra",
     "description": "Experience authentic Vedic rituals and puja services delivered by experienced priests in Ujjain.",
+    "servicesHeading": "Services",
     "quickLinksHeading": "Quick Links",
     "quickLinks": [
       { "label": "About", "href": "/#about" },
@@ -196,6 +197,42 @@
           "description": "Comprehensive Vedic rites from birth to marriage, housewarming, and other life rituals performed with full traditional procedure.",
           "details": "From child naming to wedding ceremonies, every samskara is completed with full Vedic discipline, purity, and care.",
           "image": "/images/vaidikanushthan/03/karmkand.webp"
+        },
+        {
+          "title": "Janam Kundli Analysis",
+          "description": "A deep analysis of your birth chart to understand career, marriage, health, and wealth with practical guidance and clarity.",
+          "details": "Based on your janam kundli, the service examines the key areas of life and helps you understand your strengths, challenges, and future possibilities.",
+          "image": "/images/vaidikanushthan/03/janamkundli.webp"
+        },
+        {
+          "title": "Kalsarp Dosh Shanti",
+          "description": "Special Vedic rituals to remove obstacles caused by Kaal Sarp Dosh and restore peace, success, and stability.",
+          "details": "This puja is performed to reduce the negative effects of Kaal Sarp Dosh and help clear the path for progress and balance.",
+          "image": "/images/vaidikanushthan/03/kalsarp.webp"
+        },
+        {
+          "title": "Mangaldosh Shanti",
+          "description": "Special rituals to reduce the adverse effects of Mangal Dosh and bring harmony in married life and career.",
+          "details": "The service supports peace of mind, relationship balance, and steady growth by calming the malefic influence of Mars.",
+          "image": "/images/vaidikanushthan/03/mangaldosh.webp"
+        },
+        {
+          "title": "Baglamukhi Anushthan",
+          "description": "A powerful worship of Maa Baglamukhi for victory over enemies, confidence, and protection from negative forces.",
+          "details": "This ritual is performed to strengthen courage, overcome obstacles, and create a shield of spiritual protection.",
+          "image": "/images/vaidikanushthan/03/Bagalamukhi.webp"
+        },
+        {
+          "title": "Vastu Shanti",
+          "description": "Vedic rituals to remove vastu defects from homes, offices, and other spaces and bring positive energy.",
+          "details": "The ceremony helps restore balance, harmony, and prosperity by correcting the energy flow of a place.",
+          "image": "/images/vaidikanushthan/03/vastu.webp"
+        },
+        {
+          "title": "Jyotish Shastra",
+          "description": "In-depth astrological guidance through Vedic astrology to understand life’s challenges and make wiser decisions.",
+          "details": "This service provides insight into your future path, practical solutions, and direction for important life events.",
+          "image": "/images/vaidikanushthan/03/shastra.webp"
         }
       ],
       "ctaPrimary": "Explore services →",
@@ -241,11 +278,13 @@
     },
     "contactForm": {
       "nameLabel": "Your Name",
-      "phoneLabel": "Mobile Number",
+      "phoneLabel": "Phone Number",
+      "emailLabel": "Email Address",
       "serviceLabel": "Type of Puja",
       "messageLabel": "Details",
       "namePlaceholder": "Your Name",
-      "phonePlaceholder": "Mobile Number",
+      "phonePlaceholder": "Enter your phone number",
+      "emailPlaceholder": "Enter your email address",
       "servicePlaceholder": "Type of Puja",
       "messagePlaceholder": "Enter your puja details",
       "submitButton": "Book Puja"

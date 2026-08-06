@@ -20,6 +20,9 @@ const Features = () => {
   const { messages } = useContext(LocaleContext);
   const sectionRef = useRef(null);
   const features = messages.features?.items ?? [];
+  const sectionEyebrow = messages.pages?.about?.eyebrow ?? "About";
+  const sectionTitle =
+    messages.pages?.about?.title ?? "Vedic tradition and experienced service";
 
   useEffect(() => {
     const elements = sectionRef.current?.querySelectorAll(".reveal");
@@ -42,12 +45,23 @@ const Features = () => {
   }, [messages]);
 
   return (
-    <section id="features" className="features-section" ref={sectionRef}>
+    <section id="about" className="features-section" ref={sectionRef}>
       <div className="container">
         {/* Section heading */}
-        <div className="section-heading center">
-          <span className="eyebrow">{messages.features.eyebrow}</span>
-          <h2>{messages.features.heading}</h2>
+        <div className="section-heading center reveal reveal-up">
+          <span className="eyebrow">{sectionEyebrow}</span>
+          <h2>{sectionTitle}</h2>
+          <p className="section-description">
+            Dedicated Vedic puja care with authentic mantra chanting and
+            spiritual guidance.
+          </p>
+          <p className="section-shloka">
+            ॐ यज्ञेन यज्ञमयजन्त देवास्तस्मै यज्ञमव्ययम् ॥
+          </p>
+          <p className="section-shloka-translation">
+            “By sacrifice, the gods were made known; through sacrifice the
+            imperishable is attained.”
+          </p>
         </div>
 
         {/* Intro with portrait and bio */}
