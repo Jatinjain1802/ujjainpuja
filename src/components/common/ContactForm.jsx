@@ -1,7 +1,15 @@
-﻿import { useState } from 'react';
+﻿import { useState, useContext } from "react";
+import { LocaleContext } from "../../LocaleContext";
 
 function ContactForm() {
-  const [form, setForm] = useState({ name: '', phone: '', service: '', message: '' });
+  const { messages } = useContext(LocaleContext);
+  const formLabels = messages.pages.contactForm;
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -15,19 +23,52 @@ function ContactForm() {
   return (
     <div className="contact-form-card">
       <form className="contact-form" onSubmit={handleSubmit}>
-        <label className="field-label" htmlFor="name">आपका नाम</label>
-        <input id="name" name="name" value={form.name} onChange={handleChange} placeholder="आपका नाम" />
+        <label className="field-label" htmlFor="name">
+          {formLabels.nameLabel}
+        </label>
+        <input
+          id="name"
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          placeholder={formLabels.namePlaceholder}
+        />
 
-        <label className="field-label" htmlFor="phone">मोबाइल नंबर</label>
-        <input id="phone" name="phone" value={form.phone} onChange={handleChange} placeholder="मोबाइल नंबर" />
+        <label className="field-label" htmlFor="phone">
+          {formLabels.phoneLabel}
+        </label>
+        <input
+          id="phone"
+          name="phone"
+          value={form.phone}
+          onChange={handleChange}
+          placeholder={formLabels.phonePlaceholder}
+        />
 
-        <label className="field-label" htmlFor="service">पूजा का प्रकार</label>
-        <input id="service" name="service" value={form.service} onChange={handleChange} placeholder="पूजा का प्रकार" />
+        <label className="field-label" htmlFor="service">
+          {formLabels.serviceLabel}
+        </label>
+        <input
+          id="service"
+          name="service"
+          value={form.service}
+          onChange={handleChange}
+          placeholder={formLabels.servicePlaceholder}
+        />
 
-        <label className="field-label" htmlFor="message">विवरण</label>
-        <textarea id="message" name="message" rows="4" value={form.message} onChange={handleChange} placeholder="पूजा से संबंधित विवरण लिखें" />
+        <label className="field-label" htmlFor="message">
+          {formLabels.messageLabel}
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          value={form.message}
+          onChange={handleChange}
+          placeholder={formLabels.messagePlaceholder}
+        />
 
-        <button type="submit">पूजा बुक करें</button>
+        <button type="submit">{formLabels.submitButton}</button>
       </form>
     </div>
   );

@@ -1,0 +1,254 @@
+{
+  "siteName": "Vedic Anushthan Kendra",
+  "header": {
+    "logoAlt": "Vedic Anushthan Kendra",
+    "tagline": "Ujjain’s sacred puja service",
+    "callButton": "Call",
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "phone": "+91 919039095999",
+    "languageLabel": "Language"
+  },
+  "footer": {
+    "title": "Vedic Anushthan Kendra",
+    "description": "Experience authentic Vedic rituals and puja services delivered by experienced priests in Ujjain.",
+    "quickLinksHeading": "Quick Links",
+    "quickLinks": [
+      { "label": "About", "href": "/#about" },
+      { "label": "Services", "href": "/#services" },
+      { "label": "Gallery", "href": "/#gallery" },
+      { "label": "Booking", "href": "/#contact" }
+    ],
+    "contactHeading": "Contact",
+    "locationHeading": "Our Location",
+    "locationText": "Ujjain, Madhya Pradesh, India",
+    "copyright": "© {year} Vedic Anushthan Kendra. All rights reserved."
+  },
+  "hero": {
+    "titlePrefix": "Vedic",
+    "highlight": "Anushthan",
+    "titleSuffix": "Kendra",
+    "subtitle": "Trust and the authentic Vedic tradition",
+    "description": "Conduct puja and rituals in the sacred land of Ujjain (Avantika) with traditional Vedic procedures and pure mantras.",
+    "primaryButton": "Learn more",
+    "whatsappButton": "WhatsApp us"
+  },
+  "features": {
+    "eyebrow": "॥ Our Specialties ॥",
+    "heading": "Why choose Vedic Anushthan Kendra?",
+    "items": [
+      {
+        "title": "Experienced Service",
+        "description": "With over 25 years of experience, Pandit Pawan Shastri conducts successful Vedic and tantric rituals to remove doshas and obstacles."
+      },
+      {
+        "title": "Simple & Convenient",
+        "description": "We provide complete ritual arrangements at your home or preferred location according to your convenience."
+      },
+      {
+        "title": "Trust & Satisfaction",
+        "description": "Pandit Ji is honored with the title of Acharya for his mastery in Vedic rituals. The trust and satisfaction of thousands of devotees is our greatest recognition."
+      },
+      {
+        "title": "Authentic Vedic Rituals",
+        "description": "Our rituals follow strict Vedic procedures, traditional mantras, and genuine priestly practices for high spiritual effectiveness."
+      },
+      {
+        "title": "Personalized Puja Planning",
+        "description": "Every ceremony is tailored to your family, horoscope, and spiritual needs with expert guidance from Pandit Ji."
+      },
+      {
+        "title": "Mobile Puja Support",
+        "description": "We bring complete puja arrangements to your home or chosen venue, including all materials and priest services."
+      }
+    ]
+  },
+  "priest": {
+    "name": "Pandit Pawan Shastri",
+    "intro": "Pandit Pawan Shastri is a renowned Vedic acharya and tantra practitioner from Ujjain (Avantika Tirth). He holds an M.A. in Vedic Studies and has been devoted to religion, spirituality, and Vedic rituals since childhood. His daily practice includes traditional mantra recitation, shuddhi rituals, and family puja guidance.",
+    "training": "Pandit Ji received deep and practical knowledge of all types of Vedic rituals, puja procedures and religious samskaras from his father. His family has been performing worship and religious rites in the sacred land of Ujjain for generations, and he continues this tradition with precise Vedic methods.",
+    "experience": "He has been honored with the title of Acharya in Vedic rituals and for more than 25 years has been performing Vedic and tantric rituals to help remove various doshas and life obstacles. He also advises families on auspicious dates, personalized puja schedules, and spiritual healing with pure offerings.",
+    "additional": "He provides warm, personalized guidance so every ceremony is meaningful, spiritually uplifting, and aligned with your family’s needs."
+  },
+  "whatsapp": {
+    "generic": "Hello, I would like to know more about your puja services and booking process.",
+    "serviceTemplate": "Hello, I would like to book the following service: {service}. Please share details and availability.",
+    "bookNow": "Book now",
+    "headerButton": "WhatsApp"
+  },
+  "pages": {
+    "home": {
+      "eyebrow": "Vedic Anushthan Kendra",
+      "title": "Trust and the authentic Vedic tradition",
+      "description": "Experience pure mantra chanting, traditional puja, and trusted dosh nivaran service with Pandit Pawan Shastri Ji in Ujjain.",
+      "ctaPrimary": "Book Puja",
+      "ctaSecondary": "WhatsApp Us",
+      "panelTitle": "Ujjain (M.P.)",
+      "panelDescription": "Over 25 years of experience in Vedic rituals and traditional puja services.",
+      "trustHighlights": [
+        "Over 25 years of experience",
+        "Pure mantra chanting with full Vedic procedure",
+        "At-home or preferred location service",
+        "Service built on trust and satisfaction"
+      ],
+      "featuresSection": {
+        "eyebrow": "Our Specialties",
+        "title": "Service with faith, tradition, and trust",
+        "description": "Pandit Pawan Shastri Ji offers Vedic rituals and dosh nivaran with authentic tradition from the sacred land of Ujjain."
+      },
+      "featureSectionTitle": "Why choose our service?",
+      "featureSectionText1": "Every puja ritual is completed with careful explanation, pure mantra chanting, and tradition. This service is available at home or your chosen venue with complete trust.",
+      "featureSectionList": [
+        "Full adherence to traditional procedure",
+        "Direct experience and ancestral ritual knowledge",
+        "Home, business, and housewarming ceremonies"
+      ],
+      "serviceSection": {
+        "eyebrow": "Services",
+        "title": "Puja and dosh nivaran services for every need",
+        "description": "Our experienced priest provides traditional mantra chanting and Vedic procedures for your ceremonies."
+      },
+      "gallerySection": {
+        "eyebrow": "Gallery",
+        "title": "A sacred glimpse of our rituals",
+        "description": "A look into the devotion, purity, and mantra chanting behind our puja and ritual services."
+      },
+      "contactCta": {
+        "eyebrow": "Puja Booking",
+        "title": "Plan your ritual today",
+        "description": "Connect for traditional Vedic rituals to remove graha doshas, obstacles, and negative energy."
+      }
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "Vedic tradition and experienced service",
+      "description": "Pandit Pawan Shastri Ji is connected to his ancestral Vedic tradition in Ujjain and performs pure mantra chanting and Vedic rituals.",
+      "traditionTitle": "Our Tradition",
+      "traditionParagraph1": "Pandit Pawan Shastri Ji inherited deep Vedic knowledge and ritual expertise from his family lineage. His service is rooted in the sacred land of Ujjain and each ceremony is performed with purity and devotion.",
+      "traditionParagraph2": "He conducts all types of home and temple rituals, Buddhi puja, Navagraha shanti, Shani dosh nivaran, and Mahamrityunjay japa with complete sincerity.",
+      "highlightsTitle": "Our Key Strengths",
+      "trustHighlights": [
+        "Over 25 years of experience",
+        "Pure mantra chanting with full procedure",
+        "Home or desired location service",
+        "Work based on trust and satisfaction"
+      ]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "For every puja and dosh nivaran need",
+      "description": "Our experienced priests provide services with traditional mantra chanting and Vedic methods.",
+      "items": [
+        {
+          "title": "Abhishek Ritual",
+          "description": "Vedic abhishek for Lord Shiva and other deities with mantra chanting.",
+          "details": "Sacred water abhishek is performed with traditional Vedic mantras to strengthen devotion and attract blessings.",
+          "image": "/images/vaidikanushthan/03/mahamritunjaya.webp"
+        },
+        {
+          "title": "Shani Dosh Nivaran",
+          "description": "Special rituals to relieve the adverse effects of Shani, Sade-Sati, and Dhaiya.",
+          "details": "This remedy ritual uses proven Vedic methods and mantras to reduce Saturn’s malefic influence and bring calm.",
+          "image": "/images/vaidikanushthan/03/shanidoshj.webp"
+        },
+        {
+          "title": "Navagraha Shanti",
+          "description": "Balance and positive energy through rituals for all nine planets.",
+          "details": "Navagraha Shanti rituals restore planetary balance and invite peace, success, and well-being into your life.",
+          "image": "/images/vaidikanushthan/03/navgrahdosh-1024x576.webp"
+        },
+        {
+          "title": "Mahamrityunjay Japa",
+          "description": "Powerful chanting for protection from illness, fear, and untimely death.",
+          "details": "This protective japa ceremony is focused on healing energy, health, and overcoming negative forces.",
+          "image": "/images/vaidikanushthan/03/mahamritunjaya.webp"
+        },
+        {
+          "title": "Navchandi & Shatachandi",
+          "description": "Shakti sadhana and wish fulfillment through dedicated Durga recitation.",
+          "details": "The Durga path invokes divine strength and protects your home, career, and family with sacred chanting.",
+          "image": "/images/vaidikanushthan/03/chandihavan.webp"
+        },
+        {
+          "title": "Yagya & Havan",
+          "description": "Environmental purification and planetary peace via sacred homa rituals.",
+          "details": "A fire ceremony that cleanses energy, honors the gods, and helps create a peaceful atmosphere.",
+          "image": "/images/vaidikanushthan/03/divine.webp"
+        },
+        {
+          "title": "Shrimad Bhagwat Katha Ritual",
+          "description": "A sacred storytelling ritual of the Shrimad Bhagwat Mahapurana to awaken devotion, knowledge, and detachment.",
+          "details": "The divine narration brings spiritual awakening, peace, and deep insight through revered scripture.",
+          "image": "/images/vaidikanushthan/03/bhagwatgita.webp"
+        },
+        {
+          "title": "Shiva Purana Katha Ritual",
+          "description": "A ritual narration celebrating Lord Shiva's greatness, stories, and spiritual teachings.",
+          "details": "The Shiva Purana path honors Lord Shiva with stories and rituals that inspire devotion and spiritual strength.",
+          "image": "/images/vaidikanushthan/03/shivpuran.webp"
+        },
+        {
+          "title": "Complete Vedic Samskaras",
+          "description": "Comprehensive Vedic rites from birth to marriage, housewarming, and other life rituals performed with full traditional procedure.",
+          "details": "From child naming to wedding ceremonies, every samskara is completed with full Vedic discipline, purity, and care.",
+          "image": "/images/vaidikanushthan/03/karmkand.webp"
+        }
+      ],
+      "ctaPrimary": "Explore services →",
+      "ctaSecondary": "Chat on WhatsApp"
+    },
+    "gallery": {
+      "eyebrow": "Gallery",
+      "title": "A sacred glimpse of our rituals",
+      "description": "A look into the devotion, purity, and mantra chanting behind our puja and ritual services.",
+      "items": [
+        {
+          "title": "Shani Dosh",
+          "description": "Special rituals and puja methods",
+          "icon": "🌙"
+        },
+        {
+          "title": "Navagraha Shanti",
+          "description": "Balance and auspicious worship",
+          "icon": "☀️"
+        },
+        {
+          "title": "Mahamrityunjay",
+          "description": "Protection, peace, and spiritual energy",
+          "icon": "🕉️"
+        },
+        {
+          "title": "Karmakand",
+          "description": "Traditional Vedic samskaras and puja",
+          "icon": "🪔"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Reach out to book your puja",
+      "description": "Traditional Vedic rituals are performed to remove graha doshas, obstacles, and negative effects in life.",
+      "phoneLabel": "Phone",
+      "locationLabel": "Location",
+      "chatLabel": "WhatsApp support",
+      "availabilityLabel": "Service available 24x7",
+      "phoneValue": "+91 90390 95999",
+      "locationValue": "Ujjain (M.P.)"
+    },
+    "contactForm": {
+      "nameLabel": "Your Name",
+      "phoneLabel": "Mobile Number",
+      "serviceLabel": "Type of Puja",
+      "messageLabel": "Details",
+      "namePlaceholder": "Your Name",
+      "phonePlaceholder": "Mobile Number",
+      "servicePlaceholder": "Type of Puja",
+      "messagePlaceholder": "Enter your puja details",
+      "submitButton": "Book Puja"
+    }
+  }
+}

@@ -29,7 +29,12 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: radial-gradient(circle at top left, rgba(255, 238, 212, 0.35) 0%, transparent 22%),
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 238, 212, 0.35) 0%,
+      transparent 22%
+    ),
     linear-gradient(135deg, #fff8eb 0%, #f2e8d4 100%);
   color: var(--text-primary);
 }
@@ -120,7 +125,9 @@ img {
 .nav-link {
   color: rgba(247, 233, 202, 0.95);
   font-weight: 600;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .nav-link:hover {
@@ -162,7 +169,12 @@ img {
 }
 
 .hero-section {
-  background: radial-gradient(circle at top left, rgba(255, 214, 133, 0.22) 0%, transparent 28%),
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 214, 133, 0.22) 0%,
+      transparent 28%
+    ),
     linear-gradient(135deg, #a66b1c 0%, #5a2e0b 40%, #25130a 100%);
   color: #fff8e6;
   padding: 88px 0 72px;
@@ -171,7 +183,7 @@ img {
 }
 
 .hero-section::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -120px;
   right: -120px;
@@ -232,7 +244,10 @@ img {
   padding: 14px 24px;
   border-radius: 999px;
   font-weight: 700;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -311,6 +326,25 @@ img {
   margin: 10px 0 12px;
   font-size: clamp(1.8rem, 3vw, 2.8rem);
   line-height: 1.05;
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.75s ease-out,
+    transform 0.75s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  transform: translateY(40px);
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
 }
 
 .section-heading p {
@@ -393,6 +427,17 @@ img {
 .gallery-card p,
 .service-card p {
   color: #5f4731;
+}
+
+.service-detail {
+  margin-top: 14px;
+  color: #6d553c;
+  line-height: 1.75;
+  font-size: 0.98rem;
+}
+
+.whatsapp-link {
+  margin-top: 20px;
 }
 
 .contact-cta-section {
@@ -514,7 +559,7 @@ img {
 .footer-note {
   margin-top: 32px;
   padding-top: 24px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: #b4a281;
   text-align: center;
 }

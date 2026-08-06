@@ -1,0 +1,174 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 0 90px;
+  background:
+    linear-gradient(120deg, rgba(10, 8, 6, 0.82), rgba(80, 40, 10, 0.56)),
+    url("../assets/hero_bg.png") center/cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(216, 162, 74, 0.2),
+    transparent 38%
+  );
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(8, 6, 5, 0.6) 0%,
+    rgba(50, 22, 8, 0.45) 50%,
+    rgba(120, 60, 12, 0.18) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-glass-panel {
+  max-width: 840px;
+  padding: 54px 40px;
+  text-align: center;
+  /* slightly more opaque to ensure text contrast */
+  background: rgba(255, 251, 244, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(230, 213, 188, 0.9);
+  border-radius: 26px;
+  color: var(--color-text-dark);
+  box-shadow: 0 24px 48px rgba(47, 36, 24, 0.12);
+  animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-glass-panel h1 {
+  font-size: clamp(2.7rem, 4.3vw, 4.2rem);
+  color: var(--color-text-dark);
+  margin-bottom: 10px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.hero-glass-panel h1 span {
+  color: var(--color-secondary);
+  background: linear-gradient(135deg, var(--color-secondary), #ffd796);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.32rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  margin-bottom: 34px;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .btn-primary,
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  font-size: 1rem;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.hero-buttons .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(154, 79, 18, 0.24);
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #24c86a, #1ea955);
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(30, 169, 85, 0.18);
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(30, 169, 85, 0.24);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 72px;
+  }
+
+  .hero-glass-panel {
+    padding: 38px 22px;
+    margin: 0 16px;
+  }
+
+  .hero-glass-panel h1 {
+    font-size: 2.45rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    justify-content: center;
+  }
+}

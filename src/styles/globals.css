@@ -1,27 +1,25 @@
 :root {
-  /* Color Palette - Traditional yet Modern */
-  --color-primary: #E14503; /* Deep Saffron */
-  --color-primary-hover: #C53A02;
-  --color-secondary: #FFD700; /* Rich Gold */
-  --color-text-dark: #1E293B; /* Charcoal */
-  --color-text-light: #F8FAFC;
-  --color-text-muted: #64748B;
-  --color-bg-light: #FAFAFA; /* Off-white / Ivory */
-  --color-bg-white: #FFFFFF;
-  --color-border: #E2E8F0;
+  --color-primary: #9a4f12;
+  --color-primary-hover: #7b3b0d;
+  --color-secondary: #d8a24a;
+  --color-accent-soft: #fbe8c8;
+  --color-text-dark: #2f2418;
+  --color-text-light: #fdf8ef;
+  --color-text-muted: #6f5841;
+  --color-bg-light: #f7ebdc;
+  --color-bg-white: #fffdfa;
+  --color-border: #e6d5bc;
 
-  /* Typography */
-  --font-heading: 'Martel', serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: "Martel", serif;
+  --font-body: "Inter", sans-serif;
 
-  /* Shadows and Effects */
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
-  --shadow-glow: 0 0 20px rgba(225, 69, 3, 0.2);
-  
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
+  --shadow-sm: 0 10px 24px rgba(47, 36, 24, 0.06);
+  --shadow-md: 0 16px 34px rgba(47, 36, 24, 0.08);
+  --shadow-lg: 0 24px 50px rgba(47, 36, 24, 0.12);
+  --shadow-glow: 0 14px 30px rgba(154, 79, 18, 0.16);
+
+  --transition-fast: 180ms ease;
+  --transition-normal: 240ms ease;
 }
 
 * {
@@ -30,15 +28,30 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 body {
   font-family: var(--font-body);
   color: var(--color-text-dark);
-  background-color: var(--color-bg-light);
+  background: linear-gradient(135deg, #fcf7ee 0%, #f4e7d4 100%);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+::selection {
+  background: rgba(154, 79, 18, 0.18);
+  color: var(--color-text-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--color-text-dark);
@@ -57,25 +70,31 @@ button {
   font-family: var(--font-body);
 }
 
-/* Reusable Glassmorphism Container */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: var(--shadow-md);
-  border-radius: 12px;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-/* Primary Button Style */
+.glass-panel {
+  background: rgba(255, 251, 244, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  box-shadow: var(--shadow-md);
+  border-radius: 16px;
+}
+
 .btn-primary {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), #bc7323);
   color: var(--color-text-light);
   padding: 12px 24px;
-  border-radius: 8px;
+  border-radius: 999px;
   font-weight: 600;
   font-size: 1rem;
-  transition: all var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
   box-shadow: var(--shadow-sm);
   display: inline-flex;
   align-items: center;
@@ -84,7 +103,6 @@ button {
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow-glow);
 }
@@ -92,16 +110,20 @@ button {
 .btn-secondary {
   background-color: transparent;
   color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  border: 1px solid var(--color-primary);
   padding: 10px 22px;
-  border-radius: 8px;
+  border-radius: 999px;
   font-weight: 600;
   font-size: 1rem;
-  transition: all var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(225, 69, 3, 0.05);
+  background-color: rgba(154, 79, 18, 0.08);
+  transform: translateY(-1px);
 }
 
 .container {
@@ -113,19 +135,21 @@ button {
 
 .section {
   padding: 80px 0;
+  scroll-margin-top: 90px;
 }
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.4rem;
+  margin-bottom: 0.75rem;
   color: var(--color-primary);
+  letter-spacing: 0.01em;
 }
 
 .section-subtitle {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--color-text-muted);
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto 3rem auto;
 }

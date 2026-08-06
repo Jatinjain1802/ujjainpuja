@@ -1,22 +1,35 @@
-﻿import SectionHeading from '../components/common/SectionHeading';
-import ContactForm from '../components/common/ContactForm';
+﻿import { useContext } from "react";
+import SectionHeading from "../components/common/SectionHeading";
+import ContactForm from "../components/common/ContactForm";
+import { LocaleContext } from "../LocaleContext";
 
 function ContactPage() {
+  const { messages } = useContext(LocaleContext);
+  const contact = messages.pages.contact;
+
   return (
     <section className="page-section">
       <div className="container contact-page-grid">
         <div className="info-card">
           <SectionHeading
-            eyebrow="संपर्क"
-            title="पुजा बुकिंग हेतु संपर्क करें"
-            description="जीवन में उत्पन्न ग्रह दोष, बाधाएं एवं नकारात्मक प्रभावों के निवारण हेतु वैदिक विधि-विधान के साथ अनुष्ठान संपन्न किए जाते हैं।"
+            eyebrow={contact.eyebrow}
+            title={contact.title}
+            description={contact.description}
           />
 
           <div className="contact-details">
-            <p><strong>📞</strong> +91 90390 95999</p>
-            <p><strong>📍</strong> उज्जैन (म.प्र.)</p>
-            <p><strong>💬</strong> व्हाट्सएप पर तुरंत पूछताछ</p>
-            <p><strong>⏳</strong> सेवा 24x7 उपलब्ध</p>
+            <p>
+              <strong>📞</strong> {contact.phoneValue}
+            </p>
+            <p>
+              <strong>📍</strong> {contact.locationValue}
+            </p>
+            <p>
+              <strong>💬</strong> {contact.chatLabel}
+            </p>
+            <p>
+              <strong>⏳</strong> {contact.availabilityLabel}
+            </p>
           </div>
         </div>
 
