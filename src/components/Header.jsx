@@ -1,8 +1,8 @@
 const links = [
-  { label: 'परिचय', href: '#about' },
-  { label: 'सेवाएँ', href: '#services' },
-  { label: 'झलकियाँ', href: '#gallery' },
-  { label: 'संपर्क', href: '#contact' },
+  { label: "परिचय", href: "#about" },
+  { label: "सेवाएँ", href: "#services" },
+  { label: "झलकियाँ", href: "#gallery" },
+  { label: "संपर्क", href: "#contact" },
 ];
 
 function Header() {
@@ -24,16 +24,22 @@ function Header() {
 
         <div className="hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">विश्वास, परंपरा और शुद्ध मंत्रोच्चारण</span>
+            <span className="eyebrow">
+              विश्वास, परंपरा और शुद्ध मंत्रोच्चारण
+            </span>
             <h1>अनुभवी वैदिक पंडित सेवाएँ</h1>
             <p className="hero-text">
-              सभी प्रकार की वैदिक पूजा, अनुष्ठान एवं दोष निवारण पूर्ण विधि-विधान एवं शुद्ध मंत्रोच्चारण के साथ कराए जाते हैं।
+              सभी प्रकार की वैदिक पूजा, अनुष्ठान एवं दोष निवारण पूर्ण विधि-विधान
+              एवं शुद्ध मंत्रोच्चारण के साथ कराए जाते हैं।
             </p>
             <div className="hero-actions">
               <a className="btn btn-primary" href="#contact">
                 पूजा बुक करें
               </a>
-              <a className="btn btn-secondary" href="https://wa.me/919039095999">
+              <a
+                className="btn btn-secondary"
+                href="https://wa.me/919039095999"
+              >
                 व्हाट्सएप करें
               </a>
             </div>

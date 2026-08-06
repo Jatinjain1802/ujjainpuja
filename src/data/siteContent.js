@@ -25,6 +25,8 @@ export const services = [
   },
 ];
 
+export const featuredServices = services.slice(0, 4);
+
 export const galleryItems = [
   {
     title: 'शनि दोष',
@@ -56,10 +58,10 @@ export const trustHighlights = [
 ];
 
 export const quickLinks = [
-  { label: 'परिचय', href: '#about' },
-  { label: 'सेवाएँ', href: '#services' },
-  { label: 'झलकियाँ', href: '#gallery' },
-  { label: 'पूजा बुकिंग', href: '#contact' },
+  { label: 'परिचय', href: '/about' },
+  { label: 'सेवाएँ', href: '/services' },
+  { label: 'झलकियाँ', href: '/gallery' },
+  { label: 'पूजा बुकिंग', href: '/contact' },
 ];
 
 export const footerServices = [
