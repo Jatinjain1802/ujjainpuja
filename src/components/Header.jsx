@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone } from "./icons";
 import logoImage from "../assets/logo.png";
@@ -9,6 +9,8 @@ const Header = () => {
   const { locale, setLocale, messages } = useContext(LocaleContext);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navRef = useRef(null);
+  const btnRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +38,31 @@ const Header = () => {
     };
   }, [isMobileMenuOpen]);
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      // focus the first focusable element inside the mobile nav for accessibility
+      const navEl = navRef.current;
+      if (navEl) {
+        const firstFocusable = navEl.querySelector(
+          'a, button, [tabindex]:not([tabindex="-1"])',
+        );
+        if (firstFocusable) firstFocusable.focus();
+      }
+    } else {
+      // return focus to the menu button when closing
+      if (btnRef.current) btnRef.current.focus();
+    }
+
+    const handleKey = (e) => {
+      if (e.key === "Escape" && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [isMobileMenuOpen]);
+
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="container header-container">
@@ -53,6 +80,7 @@ const Header = () => {
 
         <nav
           id="mobile-nav"
+          ref={navRef}
           className={`desktop-nav ${isMobileMenuOpen ? "mobile-open" : ""}`}
           aria-hidden={!isMobileMenuOpen}
         >
@@ -101,6 +129,7 @@ const Header = () => {
         </nav>
 
         <button
+          ref={btnRef}
           className={`mobile-menu-btn ${isMobileMenuOpen ? "open" : ""}`}
           onClick={toggleMobileMenu}
           aria-expanded={isMobileMenuOpen}

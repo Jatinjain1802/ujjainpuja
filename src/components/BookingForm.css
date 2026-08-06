@@ -31,6 +31,14 @@
   gap: 8px;
 }
 
+/* Ensure labels are distinct and inputs have room for the native date picker */
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
 .form-group label {
   font-weight: 600;
   color: var(--color-text-dark);
@@ -49,6 +57,24 @@
   transition:
     border-color var(--transition-fast),
     box-shadow var(--transition-fast);
+}
+
+/* Date input: give extra right padding so the calendar icon doesn't overlap text */
+.form-group input[type="date"] {
+  padding-right: 44px;
+  color: var(--color-text-dark);
+}
+
+/* Make sure the editing text inside webkit date inputs uses theme color */
+.form-group input[type="date"]::-webkit-datetime-edit {
+  color: var(--color-text-dark);
+}
+
+/* Style the native calendar picker indicator for better contrast */
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.95;
+  cursor: pointer;
+  filter: none;
 }
 
 .form-group input:focus,
