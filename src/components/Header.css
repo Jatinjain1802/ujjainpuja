@@ -228,6 +228,10 @@
 @media (max-width: 992px) {
   .mobile-menu-btn {
     display: block;
+    /* make hamburger background neutral on smaller screens */
+    background: transparent;
+    border: 0;
+    box-shadow: none;
   }
 
   .desktop-nav {
