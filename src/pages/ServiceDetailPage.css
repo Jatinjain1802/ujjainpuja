@@ -650,29 +650,66 @@
 }
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE / MOBILE
    ========================================================= */
 
+/* Large tablets / small laptops */
+@media (max-width: 1199px) {
+  .service-detail-hero-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .service-detail-grid {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+  }
+
+  .detail-card,
+  .sidebar-card,
+  .mantra-showcase-card {
+    padding: 30px;
+  }
+}
+
+/* Tablets */
 @media (max-width: 991px) {
+  .service-detail-hero {
+    padding: 96px 0 50px;
+  }
+
   .service-detail-hero-inner {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 34px;
   }
 
   .service-detail-hero-image-wrap {
     order: -1;
-    max-width: 520px;
+    width: min(100%, 620px);
     margin: 0 auto;
-    width: 100%;
-  }
-
-  .service-detail-hero {
-    padding: 100px 0 50px;
-    text-align: center;
+    aspect-ratio: 16 / 10;
   }
 
   .service-detail-hero-content {
     align-items: center;
+    text-align: center;
+  }
+
+  .service-detail-hero-content .back-link {
+    justify-content: center;
+  }
+
+  .service-detail-hero-content .hero-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-detail-hero-content h1 {
+    max-width: 760px;
+  }
+
+  .service-detail-hero-content .hero-subtitle {
+    max-width: 680px;
   }
 
   .hero-whatsapp-btn {
@@ -681,12 +718,16 @@
 
   .service-detail-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 28px;
+  }
+
+  .service-detail-main,
+  .service-detail-sidebar {
+    gap: 24px;
   }
 
   .detail-card,
   .sidebar-card,
-  .tabs-container,
   .mantra-showcase-card {
     padding: 28px;
   }
@@ -694,152 +735,450 @@
   .tab-content-panel {
     padding: 28px;
   }
+
+  .service-detail-booking-wrap {
+    margin-top: 36px;
+  }
+
+  .service-detail-booking-wrap .booking-section {
+    padding: 56px 0;
+  }
 }
 
-/* =========================================================
-   MOBILE HERO ORDER
-   DOM is:
-   content(back + title + description + button)
-   image
-
-   Desired mobile visual order:
-   back
-   title
-   description
-   image
-   book now
-   ========================================================= */
-
+/* Phones */
 @media (max-width: 640px) {
+  .service-detail-page {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
   .service-detail-hero {
-    padding: 90px 16px 40px;
+    padding: 82px 16px 36px;
     text-align: center;
-    overflow: hidden;
   }
 
-  /*
-   * IMPORTANT:
-   * Make the hero itself a one-column grid and flatten the
-   * content wrapper. This allows the image and Book Now button
-   * to participate in the SAME mobile layout order.
-   */
+  .service-detail-hero::before {
+    right: -85px;
+    top: -35px;
+    font-size: 13rem;
+  }
+
   .service-detail-hero-inner {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    grid-template-areas:
-      "back"
-      "title"
-      "description"
-      "image"
-      "book" !important;
-    gap: 0 !important;
-    align-items: start !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  .service-detail-hero-content {
-    display: contents !important;
-  }
-
-  .service-detail-hero-content .back-link {
-    grid-area: back !important;
-    justify-self: center !important;
-    width: fit-content !important;
-    margin: 0 0 18px !important;
-  }
-
-  .service-detail-hero-content h1 {
-    grid-area: title !important;
-    width: 100% !important;
-    margin: 0 0 14px !important;
-    font-size: clamp(2rem, 9vw, 2.6rem) !important;
-    line-height: 1.12 !important;
-  }
-
-  .service-detail-hero-content .hero-subtitle {
-    grid-area: description !important;
-    width: 100% !important;
-    max-width: 680px !important;
-    justify-self: center !important;
-    margin: 0 0 24px !important;
-    font-size: 0.98rem !important;
-    line-height: 1.55 !important;
+    width: 100%;
+    max-width: 100%;
+    gap: 24px;
   }
 
   .service-detail-hero-image-wrap {
-    grid-area: image !important;
-
-    /* Override the tablet rule that previously put image first */
-    order: unset !important;
-
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 4 / 3 !important;
-
-    margin: 0 0 24px !important;
-    border-radius: 16px !important;
-
-    overflow: hidden !important;
-    position: relative !important;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 16px;
   }
 
   .service-detail-hero-img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    object-position: center center !important;
+    object-position: center center;
   }
 
-  .service-detail-hero-content .hero-whatsapp-btn {
-    grid-area: book !important;
-
-    width: 100% !important;
-    max-width: 320px !important;
-    justify-self: center !important;
-    align-self: center !important;
-
-    margin: 0 auto !important;
-    padding: 13px 20px !important;
-    box-sizing: border-box !important;
+  .service-detail-hero-content {
+    width: 100%;
+    min-width: 0;
+    align-items: center;
   }
 
-  /* Existing mobile styles */
+  .service-detail-hero-content .back-link {
+    font-size: 0.88rem;
+    margin-bottom: 16px;
+  }
+
+  .service-detail-hero-content .hero-badge {
+    max-width: 100%;
+    margin-bottom: 14px;
+    padding: 6px 11px;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+  }
+
+  .service-detail-hero-content h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(1.8rem, 8vw, 2.35rem);
+    line-height: 1.12;
+    margin-bottom: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  .service-detail-hero-content .hero-subtitle {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .hero-whatsapp-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    padding: 13px 20px;
+    margin-top: 22px;
+    font-size: 0.98rem;
+  }
+
+  .service-detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .service-detail-main,
+  .service-detail-sidebar {
+    min-width: 0;
+    width: 100%;
+    gap: 20px;
+  }
+
   .detail-card,
   .sidebar-card,
-  .tabs-container,
   .mantra-showcase-card {
-    padding: 22px;
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
   }
 
-  .tab-content-panel {
-    padding: 22px;
+  .mantra-showcase-card {
+    padding: 20px;
+  }
+
+  .mantra-card-bg-symbol {
+    right: -12px;
+    bottom: -25px;
+    font-size: 7rem;
+  }
+
+  .mantra-card-header {
+    margin-bottom: 18px;
+    gap: 10px;
+  }
+
+  .mantra-badge {
+    font-size: 0.7rem;
+    padding: 4px 9px;
+  }
+
+  .mantra-header-om {
+    font-size: 1.2rem;
+  }
+
+  .mantra-sanskrit-text {
+    font-size: 1.08rem;
+    line-height: 1.55;
+    margin-bottom: 15px;
+  }
+
+  .mantra-transliteration {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+  }
+
+  .mantra-translation {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .tabs-container {
+    width: 100%;
+    min-width: 0;
+    border-radius: 20px;
+  }
+
+  .tabs-header-bar {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+  }
+
+  .tabs-header-bar::-webkit-scrollbar {
+    display: none;
   }
 
   .tab-btn {
-    padding: 14px 16px;
+    flex: 0 0 auto;
+    min-width: 110px;
+    padding: 14px 15px;
+    font-size: 0.88rem;
+    scroll-snap-align: start;
+  }
+
+  .tab-content-panel {
+    padding: 20px;
+  }
+
+  .tab-intro-text {
+    font-size: 0.98rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .detailed-paragraph {
+    font-size: 0.94rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  .panel-highlight-box {
+    padding: 16px;
+    margin-top: 18px;
+  }
+
+  .panel-highlight-box h4 {
+    font-size: 1rem;
+  }
+
+  .panel-highlight-box p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .puja-stepper-timeline {
+    padding-left: 0;
+    margin-top: 6px;
+  }
+
+  .puja-stepper-timeline::before {
+    left: 14px;
+    top: 14px;
+    bottom: 14px;
+  }
+
+  .timeline-step-item {
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .timeline-badge-node {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 0.82rem;
+  }
+
+  .timeline-step-content {
+    min-width: 0;
+    padding-top: 2px;
+  }
+
+  .timeline-step-content h4 {
+    font-size: 1rem;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .timeline-step-content p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .guidelines-check-list {
+    gap: 13px;
+  }
+
+  .guidelines-check-list li {
+    gap: 10px;
+  }
+
+  .check-bullet {
+    font-size: 1rem;
+    margin-top: 3px;
+  }
+
+  .guidelines-check-list li span {
     font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .faq-accordion-section {
+    margin-top: 14px;
+  }
+
+  .section-subtitle-small {
+    font-size: 1.15rem;
+    margin-bottom: 16px;
+  }
+
+  .faq-accordion-container {
+    gap: 10px;
+  }
+
+  .faq-item-card {
+    border-radius: 14px;
+  }
+
+  .faq-question-trigger {
+    padding: 15px 16px;
+    gap: 12px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .faq-chevron {
+    font-size: 0.8rem;
+  }
+
+  .faq-answer-pane {
+    padding: 0 16px;
+  }
+
+  .faq-item-card.open .faq-answer-pane {
+    padding-bottom: 15px;
+  }
+
+  .faq-answer-pane p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .quick-specs-card {
+    padding: 20px;
+  }
+
+  .specs-list {
+    gap: 13px;
+  }
+
+  .spec-item {
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+
+  .spec-icon-label-wrap {
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .spec-label,
+  .spec-value {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .spec-value {
+    max-width: 48%;
+    overflow-wrap: anywhere;
+  }
+
+  .whatsapp-cta-card {
+    padding: 20px;
+  }
+
+  .whatsapp-cta-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .whatsapp-large-btn {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 0.98rem;
+    border-radius: 14px;
+  }
+
+  .service-detail-booking-wrap {
+    margin-top: 28px;
+  }
+
+  .service-detail-booking-wrap .booking-section {
+    padding: 42px 16px;
   }
 }
 
+/* Very small phones */
 @media (max-width: 380px) {
   .service-detail-hero {
     padding-left: 12px;
     padding-right: 12px;
   }
 
-  .service-detail-hero-image-wrap {
-    aspect-ratio: 4 / 3 !important;
-    margin-bottom: 20px !important;
-  }
-
   .service-detail-hero-content h1 {
-    font-size: 1.8rem !important;
+    font-size: 1.7rem;
   }
 
-  .service-detail-hero-content .hero-whatsapp-btn {
-    max-width: 100% !important;
+  .service-detail-hero-content .hero-subtitle {
+    font-size: 0.9rem;
   }
+
+  .detail-card,
+  .sidebar-card,
+  .mantra-showcase-card,
+  .tab-content-panel,
+  .quick-specs-card {
+    padding: 17px;
+  }
+
+  .tab-btn {
+    min-width: 100px;
+    padding: 13px 12px;
+    font-size: 0.84rem;
+  }
+
+  .timeline-step-item {
+    gap: 11px;
+  }
+
+  .timeline-badge-node {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+  }
+
+  .faq-question-trigger {
+    padding: 14px;
+    font-size: 0.87rem;
+  }
+
+  .faq-answer-pane {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .spec-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .spec-value {
+    max-width: 100%;
+    text-align: left;
+    padding-left: 26px;
+  }
+}
+
+/* Prevent accidental horizontal overflow from long content */
+.service-detail-page,
+.service-detail-page * {
+  box-sizing: border-box;
+}
+
+.service-detail-page img,
+.service-detail-page svg {
+  max-width: 100%;
+}
+
+.service-detail-page p,
+.service-detail-page h1,
+.service-detail-page h2,
+.service-detail-page h3,
+.service-detail-page h4,
+.service-detail-page span,
+.service-detail-page button,
+.service-detail-page a {
+  overflow-wrap: break-word;
 }
