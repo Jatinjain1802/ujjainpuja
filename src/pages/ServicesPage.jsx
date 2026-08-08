@@ -1,11 +1,12 @@
-﻿import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import SectionHeading from "../components/common/SectionHeading";
 import { LocaleContext } from "../LocaleContext";
 import "../components/Services.css";
 
 function ServicesPage() {
-  const { messages } = useContext(LocaleContext);
+  const { locale, messages } = useContext(LocaleContext);
   const services = messages.pages.services;
   const buildWhatsAppLink = (serviceTitle) => {
     const message = messages.whatsapp.serviceTemplate.replace(
@@ -73,23 +74,38 @@ function ServicesPage() {
                 style={{ transitionDelay: `${idx * 80}ms` }}
               >
                 <div className="service-img-wrap">
-                  <img src={imageSrc} alt={service.title} loading="lazy" />
+                  <Link to={`/services/${service.id}`}>
+                    <img src={imageSrc} alt={service.title} loading="lazy" />
+                  </Link>
                 </div>
                 <div className="service-info">
-                  <h3>{service.title}</h3>
+                  <h3>
+                    <Link to={`/services/${service.id}`} className="service-title-link" style={{ color: "inherit", textDecoration: "none" }}>
+                      {service.title}
+                    </Link>
+                  </h3>
                   <p>{service.description}</p>
-                  <a
-                    href={buildWhatsAppLink(service.title)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-secondary whatsapp-link"
-                    style={{ marginTop: "18px", alignSelf: "flex-start" }}
-                  >
-                    {messages.whatsapp.bookNow}{" "}
-                    <FaWhatsapp
-                      style={{ marginLeft: "8px", fontSize: "1rem" }}
-                    />
-                  </a>
+                  <div style={{ display: "flex", gap: "10px", marginTop: "18px", alignSelf: "flex-start", flexWrap: "wrap" }}>
+                    <Link
+                      to={`/services/${service.id}`}
+                      className="btn btn-primary view-details-link"
+                      style={{ padding: "10px 18px", fontSize: "0.95rem" }}
+                    >
+                      {services.viewDetails || (locale === "hi" ? "विवरण देखें" : "View Details")}
+                    </Link>
+                    <a
+                      href={buildWhatsAppLink(service.title)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-secondary whatsapp-link"
+                      style={{ padding: "10px 18px", fontSize: "0.95rem", marginTop: "0" }}
+                    >
+                      {messages.whatsapp.bookNow}{" "}
+                      <FaWhatsapp
+                        style={{ marginLeft: "8px", fontSize: "1rem" }}
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             );

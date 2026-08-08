@@ -1,11 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Select from "react-select";
 import "./BookingForm.css";
 import { LocaleContext } from "../LocaleContext";
 import enLocales from "../locales/en.json";
 import hiLocales from "../locales/hi.json";
 
-const BookingForm = () => {
+const BookingForm = ({ initialPuja = null }) => {
   const { locale, messages } = useContext(LocaleContext);
 
   // Build bilingual options from the current locale content so the form stays in sync with the expanded services list.
@@ -34,6 +34,26 @@ const BookingForm = () => {
     city: "",
     message: "",
   });
+
+  // Automatically select the initial puja if provided as a prop
+  useEffect(() => {
+    if (initialPuja && pujaOptions.length > 0) {
+      const matched = pujaOptions.find(
+        (opt) =>
+          opt.value.toLowerCase() === initialPuja.toLowerCase() ||
+          opt.label.split(" / ")[0].toLowerCase() === initialPuja.toLowerCase()
+      );
+      if (matched) {
+        setFormData((prev) => ({
+          ...prev,
+          puja: {
+            value: matched.value,
+            label: locale === "hi" ? matched.label.split(" / ")[0] : matched.value,
+          },
+        }));
+      }
+    }
+  }, [initialPuja, locale, messages]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

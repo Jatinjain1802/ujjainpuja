@@ -1,0 +1,765 @@
+/* Service Detail Page Styling */
+
+.service-detail-page {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #fffcf6 0%, #fcf4e5 100%);
+  min-height: 100vh;
+}
+
+/* Hero Section — Split Screen Layout */
+.service-detail-hero {
+  background: linear-gradient(135deg, #1a0f07 0%, #2e1a0e 60%, #3d2210 100%);
+  color: #ffffff;
+  padding: 100px 0 60px; /* top padding clears sticky header */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Subtle decorative Om pattern in background */
+.service-detail-hero::before {
+  content: "ॐ";
+  position: absolute;
+  right: -40px;
+  top: -60px;
+  font-size: 28rem;
+  color: rgba(249, 148, 3, 0.04);
+  font-weight: 700;
+  pointer-events: none;
+  line-height: 1;
+  z-index: 0;
+}
+
+/* Two-column grid inside the hero */
+.service-detail-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left column: text */
+.service-detail-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Right column: image */
+.service-detail-hero-image-wrap {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(249, 148, 3, 0.25),
+    0 32px 80px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(249, 148, 3, 0.08);
+  aspect-ratio: 4 / 3; /* fixed ratio so full image shows */
+}
+
+.service-detail-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* fills the box cleanly */
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.service-detail-hero-image-wrap:hover .service-detail-hero-img {
+  transform: scale(1.03);
+}
+
+/* WhatsApp CTA button inside hero */
+.hero-whatsapp-btn {
+  margin-top: 28px;
+  display: inline-flex !important;
+  align-items: center;
+  width: fit-content;
+  padding: 14px 28px;
+  font-size: 1.05rem;
+  border-radius: 999px;
+}
+
+/* Back Link Button */
+.service-detail-hero-content .back-link {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.service-detail-hero-content .back-link:hover {
+  color: var(--accent);
+  transform: translateX(-4px);
+}
+
+/* Badge style */
+.service-detail-hero-content .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(249, 148, 3, 0.22);
+  border: 1px solid rgba(249, 148, 3, 0.4);
+  color: #fca727;
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.service-detail-hero-content h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  line-height: 1.15;
+  margin: 0 0 16px;
+  font-weight: 800;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ffffff 0%, #ffe9c5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-detail-hero-content .hero-subtitle {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  color: rgba(255, 245, 230, 0.9);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* Grid layout for main content */
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: 1.40fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.service-detail-main,
+.service-detail-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Premium card styles */
+.detail-card,
+.sidebar-card {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(212, 176, 105, 0.22);
+  border-radius: 28px;
+  padding: 36px;
+  box-shadow: 0 16px 48px rgba(91, 55, 26, 0.05);
+}
+
+/* 1. Dynamic Sacred Mantra Card */
+.mantra-showcase-card {
+  position: relative;
+  background: linear-gradient(135deg, #25130a 0%, #170b05 100%);
+  border: 1px solid rgba(212, 176, 105, 0.3);
+  border-radius: 28px;
+  padding: 36px;
+  color: #fff6e8;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(29, 18, 10, 0.18);
+}
+
+.mantra-card-bg-symbol {
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  font-size: 11rem;
+  color: rgba(249, 148, 3, 0.05);
+  font-weight: 700;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.mantra-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.mantra-badge {
+  background: rgba(249, 148, 3, 0.16);
+  border: 1px solid rgba(249, 148, 3, 0.32);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 99px;
+  letter-spacing: 0.05em;
+}
+
+.mantra-header-om {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 1.5rem;
+}
+
+.mantra-sanskrit-text {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  line-height: 1.6;
+  font-weight: 700;
+  color: #fddb9b;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.mantra-transliteration {
+  font-size: 0.98rem;
+  color: rgba(255, 245, 230, 0.72);
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 22px;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 20px;
+}
+
+.mantra-translation {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.mantra-translation strong {
+  color: var(--accent);
+}
+
+/* 2. Interactive Tabs */
+.tabs-container {
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(212, 176, 105, 0.22);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(91, 55, 26, 0.05);
+}
+
+.tabs-header-bar {
+  display: flex;
+  background: rgba(247, 224, 183, 0.12);
+  border-bottom: 1px solid rgba(212, 176, 105, 0.18);
+  overflow-x: auto;
+}
+
+.tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 18px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: all 0.25s ease;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: var(--accent);
+  background: rgba(249, 148, 3, 0.02);
+}
+
+.tab-btn.active {
+  color: var(--accent-dark);
+  background: #ffffff;
+}
+
+.tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent);
+}
+
+.tab-content-panel {
+  padding: 36px;
+}
+
+.tab-intro-text {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-weight: 600;
+}
+
+.detailed-paragraph {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin: 0 0 24px;
+}
+
+.panel-highlight-box {
+  background: rgba(247, 224, 183, 0.15);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-top: 24px;
+}
+
+.panel-highlight-box h4 {
+  margin: 0 0 10px;
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.panel-highlight-box p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+/* 3. Stepper Timeline Procedure */
+.puja-stepper-timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.puja-stepper-timeline::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 36px;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--accent) 0%,
+    rgba(212, 176, 105, 0.1) 100%
+  );
+  border-left: 2px dashed rgba(249, 148, 3, 0.4);
+}
+
+.timeline-step-item {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.timeline-step-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-badge-node {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2.5px solid var(--accent);
+  color: var(--accent-dark);
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(91, 55, 26, 0.1);
+}
+
+.timeline-step-content {
+  flex: 1;
+  padding-top: 4px;
+}
+
+.timeline-step-content h4 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.timeline-step-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* 4. Guidelines Check List */
+.guidelines-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.guidelines-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.check-bullet {
+  color: var(--accent);
+  font-size: 1.15rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.guidelines-check-list li span {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+/* 5. FAQs Accordion styling */
+.faq-accordion-section {
+  margin-top: 20px;
+}
+
+.section-subtitle-small {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.faq-accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item-card {
+  background: #ffffff;
+  border: 1px solid rgba(212, 176, 105, 0.22);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(91, 55, 26, 0.02);
+  transition: all 0.3s ease;
+}
+
+.faq-item-card:hover {
+  border-color: rgba(249, 148, 3, 0.32);
+  box-shadow: 0 10px 24px rgba(91, 55, 26, 0.04);
+}
+
+.faq-question-trigger {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  gap: 16px;
+  transition: color 0.2s ease;
+}
+
+.faq-question-trigger:hover {
+  color: var(--accent-dark);
+}
+
+.faq-chevron {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-item-card.open {
+  border-color: rgba(249, 148, 3, 0.35);
+  box-shadow: 0 12px 28px rgba(91, 55, 26, 0.06);
+}
+
+.faq-item-card.open .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+.faq-answer-pane {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+  padding: 0 24px;
+  background: rgba(255, 249, 238, 0.25);
+}
+
+.faq-item-card.open .faq-answer-pane {
+  max-height: 500px; /* smooth slide expansion */
+  transition: max-height 0.35s cubic-bezier(1, 0, 1, 0);
+  padding-bottom: 20px;
+}
+
+.faq-answer-pane p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  padding-top: 4px;
+}
+
+/* 6. Specs/Quick facts card style */
+.quick-specs-card {
+  padding: 32px;
+  background: linear-gradient(135deg, #ffffff 0%, #fffcf7 100%);
+}
+
+.specs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed rgba(212, 176, 105, 0.22);
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.spec-icon-label-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spec-icon {
+  color: var(--accent);
+  font-size: 0.98rem;
+  flex-shrink: 0;
+}
+
+.spec-label {
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.spec-value {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+/* 7. WhatsApp CTA Sidebar Card */
+.whatsapp-cta-card {
+  background: linear-gradient(135deg, #1d120a 0%, #2f1d10 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.whatsapp-cta-card h3 {
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.whatsapp-cta-card p {
+  color: rgba(255, 245, 230, 0.85);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.whatsapp-large-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px 24px;
+  font-size: 1.05rem;
+  border-radius: 16px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 215, 102, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 16px 4px rgba(37, 215, 102, 0.2);
+    transform: scale(1.01);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 215, 102, 0);
+    transform: scale(1);
+  }
+}
+
+/* Booking Form wrap at bottom */
+.service-detail-booking-wrap {
+  background: rgba(255, 249, 238, 0.5);
+  border-top: 1px solid rgba(212, 176, 105, 0.18);
+  margin-top: 50px;
+}
+
+.service-detail-booking-wrap .booking-section {
+  padding: 70px 0;
+}
+
+/* 8. Fade-in animations */
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+  /* Stack the hero columns vertically on tablets */
+  .service-detail-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  /* Image comes first on mobile for visual impact */
+  .service-detail-hero-image-wrap {
+    order: -1;
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .service-detail-hero {
+    padding: 100px 0 50px;
+    text-align: center;
+  }
+
+  .service-detail-hero-content {
+    align-items: center;
+  }
+
+  .hero-whatsapp-btn {
+    align-self: center;
+  }
+
+  .service-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .detail-card,
+  .sidebar-card,
+  .tabs-container,
+  .mantra-showcase-card {
+    padding: 28px;
+  }
+
+  .tab-content-panel {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-detail-hero {
+    padding: 90px 0 40px;
+  }
+
+  .service-detail-hero-image-wrap {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+
+  .service-detail-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .service-detail-hero-content .hero-subtitle {
+    font-size: 0.98rem;
+  }
+
+  .detail-card,
+  .sidebar-card,
+  .tabs-container,
+  .mantra-showcase-card {
+    padding: 22px;
+  }
+
+  .tab-content-panel {
+    padding: 22px;
+  }
+
+  .tab-btn {
+    padding: 14px 16px;
+    font-size: 0.92rem;
+  }
+
+  .puja-stepper-timeline::before {
+    left: 20px;
+  }
+
+  .puja-stepper-timeline {
+    padding-left: 0;
+  }
+
+  .timeline-badge-node {
+    width: 30px;
+    height: 30px;
+  }
+
+  .timeline-step-item {
+    gap: 16px;
+  }
+
+  .timeline-step-content h4 {
+    font-size: 1.05rem;
+  }
+
+  .faq-question-trigger {
+    padding: 16px 20px;
+    font-size: 0.96rem;
+  }
+
+  .faq-answer-pane {
+    padding: 0 20px;
+  }
+
+  .faq-item-card.open .faq-answer-pane {
+    padding-bottom: 16px;
+  }
+}

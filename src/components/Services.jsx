@@ -68,10 +68,16 @@ const Services = () => {
                 style={{ transitionDelay: `${idx * 80}ms` }}
               >
                 <div className="service-img-wrap">
-                  <img src={imageSrc} alt={service.title} loading="lazy" />
+                  <Link to={`/services/${service.id}`}>
+                    <img src={imageSrc} alt={service.title} loading="lazy" />
+                  </Link>
                 </div>
                 <div className="service-info">
-                  <h3>{service.title}</h3>
+                  <h3>
+                    <Link to={`/services/${service.id}`} className="service-title-link" style={{ color: "inherit", textDecoration: "none" }}>
+                      {service.title}
+                    </Link>
+                  </h3>
                   <p>{service.details || service.description}</p>
                 </div>
               </div>

@@ -143,92 +143,108 @@
       "eyebrow": "Services",
       "title": "For every puja and dosh nivaran need",
       "description": "Our experienced priests provide services with traditional mantra chanting and Vedic methods.",
+      "viewDetails": "View Details",
       "items": [
         {
+          "id": "abhishek-ritual",
           "title": "Abhishek Ritual",
           "description": "Vedic abhishek for Lord Shiva and other deities with mantra chanting.",
           "details": "Sacred water abhishek is performed with traditional Vedic mantras to strengthen devotion and attract blessings.",
           "image": "/images/vaidikanushthan/03/mahamritunjaya.webp"
         },
         {
+          "id": "shani-dosh-nivaran",
           "title": "Shani Dosh Nivaran",
           "description": "Special rituals to relieve the adverse effects of Shani, Sade-Sati, and Dhaiya.",
           "details": "This remedy ritual uses proven Vedic methods and mantras to reduce Saturn’s malefic influence and bring calm.",
           "image": "/images/vaidikanushthan/03/shanidoshj.webp"
         },
         {
+          "id": "navagraha-shanti",
           "title": "Navagraha Shanti",
           "description": "Balance and positive energy through rituals for all nine planets.",
           "details": "Navagraha Shanti rituals restore planetary balance and invite peace, success, and well-being into your life.",
           "image": "/images/vaidikanushthan/03/navgrahdosh-1024x576.webp"
         },
         {
+          "id": "mahamrityunjay-japa",
           "title": "Mahamrityunjay Japa",
           "description": "Powerful chanting for protection from illness, fear, and untimely death.",
           "details": "This protective japa ceremony is focused on healing energy, health, and overcoming negative forces.",
           "image": "/images/vaidikanushthan/03/mahamritunjaya.webp"
         },
         {
+          "id": "navchandi-shatachandi",
           "title": "Navchandi & Shatachandi",
           "description": "Shakti sadhana and wish fulfillment through dedicated Durga recitation.",
           "details": "The Durga path invokes divine strength and protects your home, career, and family with sacred chanting.",
           "image": "/images/vaidikanushthan/03/chandihavan.webp"
         },
         {
+          "id": "yagya-havan",
           "title": "Yagya & Havan",
           "description": "Environmental purification and planetary peace via sacred homa rituals.",
           "details": "A fire ceremony that cleanses energy, honors the gods, and helps create a peaceful atmosphere.",
           "image": "/images/vaidikanushthan/03/divine.webp"
         },
         {
+          "id": "shrimad-bhagwat-katha",
           "title": "Shrimad Bhagwat Katha Ritual",
           "description": "A sacred storytelling ritual of the Shrimad Bhagwat Mahapurana to awaken devotion, knowledge, and detachment.",
           "details": "The divine narration brings spiritual awakening, peace, and deep insight through revered scripture.",
           "image": "/images/vaidikanushthan/03/bhagwatgita.webp"
         },
         {
+          "id": "shiva-purana-katha",
           "title": "Shiva Purana Katha Ritual",
           "description": "A ritual narration celebrating Lord Shiva's greatness, stories, and spiritual teachings.",
           "details": "The Shiva Purana path honors Lord Shiva with stories and rituals that inspire devotion and spiritual strength.",
           "image": "/images/vaidikanushthan/03/shivpuran.webp"
         },
         {
+          "id": "complete-vedic-samskaras",
           "title": "Complete Vedic Samskaras",
           "description": "Comprehensive Vedic rites from birth to marriage, housewarming, and other life rituals performed with full traditional procedure.",
           "details": "From child naming to wedding ceremonies, every samskara is completed with full Vedic discipline, purity, and care.",
           "image": "/images/vaidikanushthan/03/karmkand.webp"
         },
         {
+          "id": "janam-kundli-analysis",
           "title": "Janam Kundli Analysis",
           "description": "A deep analysis of your birth chart to understand career, marriage, health, and wealth with practical guidance and clarity.",
           "details": "Based on your janam kundli, the service examines the key areas of life and helps you understand your strengths, challenges, and future possibilities.",
           "image": "/images/vaidikanushthan/03/janamkundli.webp"
         },
         {
+          "id": "kalsarp-dosh-shanti",
           "title": "Kalsarp Dosh Shanti",
           "description": "Special Vedic rituals to remove obstacles caused by Kaal Sarp Dosh and restore peace, success, and stability.",
           "details": "This puja is performed to reduce the negative effects of Kaal Sarp Dosh and help clear the path for progress and balance.",
           "image": "/images/vaidikanushthan/03/kalsarp.webp"
         },
         {
+          "id": "mangaldosh-shanti",
           "title": "Mangaldosh Shanti",
           "description": "Special rituals to reduce the adverse effects of Mangal Dosh and bring harmony in married life and career.",
           "details": "The service supports peace of mind, relationship balance, and steady growth by calming the malefic influence of Mars.",
           "image": "/images/vaidikanushthan/03/mangaldosh.webp"
         },
         {
+          "id": "baglamukhi-anushthan",
           "title": "Baglamukhi Anushthan",
           "description": "A powerful worship of Maa Baglamukhi for victory over enemies, confidence, and protection from negative forces.",
           "details": "This ritual is performed to strengthen courage, overcome obstacles, and create a shield of spiritual protection.",
           "image": "/images/vaidikanushthan/03/Bagalamukhi.webp"
         },
         {
+          "id": "vastu-shanti",
           "title": "Vastu Shanti",
           "description": "Vedic rituals to remove vastu defects from homes, offices, and other spaces and bring positive energy.",
           "details": "The ceremony helps restore balance, harmony, and prosperity by correcting the energy flow of a place.",
           "image": "/images/vaidikanushthan/03/vastu.webp"
         },
         {
+          "id": "jyotish-shastra",
           "title": "Jyotish Shastra",
           "description": "In-depth astrological guidance through Vedic astrology to understand life’s challenges and make wiser decisions.",
           "details": "This service provides insight into your future path, practical solutions, and direction for important life events.",
