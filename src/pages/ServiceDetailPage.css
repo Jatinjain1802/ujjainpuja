@@ -1226,3 +1226,293 @@
 .service-detail-page a {
   overflow-wrap: break-word;
 }
+
+/* =========================================================
+   NEW SEO LANDING PAGE EXTENSIONS
+   ========================================================= */
+
+.hero-intro-lead {
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+  color: rgba(255, 235, 205, 0.85);
+  margin-top: 14px;
+  line-height: 1.6;
+}
+
+.hero-action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.hero-call-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff !important;
+  border-radius: 999px;
+  padding: 14px 26px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.hero-call-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: #ffffff;
+}
+
+.seo-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.seo-card-header h2,
+.seo-section-card h2 {
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+  color: var(--text-primary);
+  margin: 0 0 16px;
+  font-weight: 700;
+}
+
+.seo-icon,
+.highlight-icon {
+  color: var(--accent);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.subblock-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.seo-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.seo-type-item {
+  background: rgba(247, 224, 183, 0.1);
+  border: 1px solid rgba(212, 176, 105, 0.25);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.seo-type-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(91, 55, 26, 0.08);
+  border-color: var(--accent);
+}
+
+.type-badge-num {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--accent);
+  background: #ffffff;
+  border: 1.5px solid var(--accent);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.type-content h3 {
+  font-size: 1.08rem;
+  margin: 0 0 6px;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.type-content p {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.55;
+}
+
+.guideline-sub-card h4 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+.required-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.req-tag {
+  background: rgba(249, 148, 3, 0.1);
+  border: 1px solid rgba(249, 148, 3, 0.25);
+  color: var(--accent-dark);
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.disclaimer-note {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.online-sankalp-card {
+  background: linear-gradient(135deg, #fffcf5 0%, #fef5e7 100%);
+  border: 1px solid rgba(249, 148, 3, 0.3);
+}
+
+.sankalp-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.sankalp-icon {
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+.online-btn {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.why-panditji-block h2 {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+}
+
+.star-bullet {
+  color: #f39c12 !important;
+}
+
+.booking-steps-block {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px dashed rgba(212, 176, 105, 0.3);
+}
+
+.booking-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.booking-step-chip {
+  background: #ffffff;
+  border: 1px solid rgba(212, 176, 105, 0.25);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.step-num {
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-text {
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.strong-cta-card {
+  background: linear-gradient(135deg, #1d0f07 0%, #3a1e0b 100%);
+  border: 1px solid rgba(249, 148, 3, 0.4);
+  border-radius: 28px;
+  padding: 40px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(29, 15, 7, 0.25);
+}
+
+.strong-cta-card h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: #ffffff;
+  margin: 0 0 14px;
+  font-weight: 800;
+}
+
+.strong-cta-card p {
+  color: rgba(255, 245, 230, 0.9);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 680px;
+  margin: 0 auto 20px;
+}
+
+.cta-devotional-tagline {
+  color: #fddb9b !important;
+  font-weight: 700;
+  font-size: 1.15rem !important;
+  letter-spacing: 0.05em;
+  margin-bottom: 28px !important;
+}
+
+.strong-cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cta-btn-wa {
+  padding: 15px 32px;
+  font-size: 1.05rem;
+  border-radius: 99px;
+}
+
+.cta-btn-call {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff !important;
+  border-radius: 99px;
+  padding: 15px 32px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.cta-btn-call:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
