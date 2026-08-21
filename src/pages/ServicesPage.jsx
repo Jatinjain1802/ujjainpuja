@@ -1,11 +1,12 @@
 import { useContext, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import SectionHeading from "../components/common/SectionHeading";
 import { LocaleContext } from "../LocaleContext";
 import "../components/Services.css";
 
 function ServicesPage() {
+  const navigate = useNavigate();
   const { locale, messages } = useContext(LocaleContext);
   const services = messages.pages.services;
   const buildWhatsAppLink = (serviceTitle) => {
@@ -70,8 +71,12 @@ function ServicesPage() {
             return (
               <div
                 key={service.title}
-                className="service-card reveal reveal-up"
-                style={{ transitionDelay: `${idx * 80}ms` }}
+                className="service-card reveal reveal-up clickable-card"
+                onClick={(e) => {
+                  if (e.target.closest("a") || e.target.closest("button")) return;
+                  navigate(`/services/${service.id}`);
+                }}
+                style={{ transitionDelay: `${idx * 80}ms`, cursor: "pointer" }}
               >
                 <div className="service-img-wrap">
                   <Link to={`/services/${service.id}`}>
